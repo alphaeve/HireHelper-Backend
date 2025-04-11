@@ -7,7 +7,13 @@ import interviewRoutes from "./routes/interviewRoutes.js"; // ✅ new import
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+app.use(cors({
+  origin: "https://hire-helper.vercel.app",
+  methods: ["GET", "POST"],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 app.use("/api/ai", aiRoutes);
