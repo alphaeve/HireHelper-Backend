@@ -25,6 +25,7 @@ app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
 
-const trackRouter = require('./routes/track');
+// const trackRouter = require('./routes/track');
+import trackRouter from './routes/track.js';
 app.use('/', trackRouter);
 
